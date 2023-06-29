@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<!-- 
+    Resources used:
+    https://blog.logrocket.com/creative-text-flows-using-css-shapes/  - flowing text around shapes
+-->
+
+<link rel="stylesheet" href="css/portfolio_1.css">
+
+<script> // 
+    function toggleTheme() {
+        // Obtains an array of all <link>
+        // elements.
+        // Select your element using indexing.
+        var theme = document.getElementsByTagName('link')[0];
+
+        // Change the value of href attribute 
+        // to change the css sheet.
+        var file_name = 'css/portfolio_1.css'
+        if (theme.getAttribute('href') == 'css/portfolio_1.css') {
+            theme.setAttribute('href', 'css/portfolio_2.css');
+            file_name = 'css/portfolio_2.css';
+        } else {
+            theme.setAttribute('href', 'css/portfolio_1.css');
+            file_name = 'css/portfolio_1.css';
+        }
+
+        localStorage.setItem('fileName', file_name);
+
+    }
+
+    window.onload = function(){
+    // TASK 2
+    // TODO: Make the last div color persist even when someone refreshes the page.
+
+    // Steps
+    // 2 (a) get stylesheet name from local storage hint: localStorage.getItem(name)
+ 
+    var styleSheetValue = localStorage.getItem('fileName') || 'css/portfolio_2.css';
+
+    // 2 (b) get html style element by ID
+    var styleElement = document.getElementsByTagName('link')[0];
+    styleElement.setAttribute('href', styleSheetValue);
+    // 2 (c) replace href attribute of html element.
+    
+    }
+</script>
+
+<header> 
+    <nav>
+        <ul>
+            <li><a href = "index.html">Home</a></li>
+            <li><a href = "portfolio.html">Portfolio</a></li>
+            <li><a href = "qualifications.html">Qualifications</a></li>
+            <li><a href = "service.html">Service</a></li>
+            <li><a href = "chat_gpt.html">AI-Generated Webpage</a></li>
+            <li><button1 onclick="toggleTheme()" class = "style_change">Switch It Up</button></li>
+
+        </ul>
+    </nav>
+</header>
+
+</div>
+
+<div class = "container">
+    <img src = "svg/beam.svg" class = "beam">
+
+    <div class = "rectangle"> <p>Technical Portfolio</p></div>
+
+    <div class = "name">
+        <!-- <img src = "images/signature_dog.png" width = "350px" height = "267px" class = "dog"> -->
+        <p4>Technical <br/>Portfolio</p4>
+    </div>
+
+    <img src = "images/Asset 4portfolio_circle.png" alt = "" class = "portfolio_img" width = 400px height = 400px>
+
+
+    <div class = "portfolio_body">
+        <ul1>
+            <li1>
+              <h3>Dungeons and Dragons Character Creator</h3>
+              <p3>This was the first large-scale project I completed in college. I got plenty of practice writing basic functions and learning to use
+                  the many data types Python has to offer. As an added challenge, I took on the task of implementing a GUI for the program using the
+                  Python package Tkinter. 
+              </p3>
+            </li1>
+            <li1>
+              <h3>CSCE 221 Projects</h3>
+              <p3>Computer Science 221: Data Structures and Algorithms was a course I took during my sophomore year at Texas A&M. Throughout the duration of
+                  this class, I gained practical knowledge of data structures - linked lists, hash tables, maps, trees, etc. - which is demonstrated within 
+                  the five programming assignments provided in the link below.
+              </p>
+            </li1>
+            <li1>
+              <h3>Processor Simulation</h3>
+              <p3>Computer Science 312: Computer Organization was a course I took my junior year. This class demonstrated the capabilities of a computer
+                  and provided in-depth understanding of memory allocation and the process by which programs are run. As a final project, my labmates and 
+                  I were tasked with simulating a computer by using simple logic gates and register files in a simulation program called Logisim.
+              </p>
+            </li1>
+            <li1>
+                <a href = "https://github.com/garrettguerrero/Noteworthy-Projects"><button>Download My Project Files Here!</button></a>
+            </li1>
+        </ul1>
+    </div>
+
+    <footer>
+        <p1>Copyright © 2023 Garrett Guerrero</p1>
+    </footer>
+</div>
+
+
+
+
+<!-- <html>
+    <body>
+
+        <h1>Howdy!</h1>
+        <p1>Thanks and gig 'em!</p>
+    </body>
+</html>  -->

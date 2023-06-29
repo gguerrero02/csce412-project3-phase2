@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<!-- 
+    Resources used:
+    https://blog.logrocket.com/creative-text-flows-using-css-shapes/  - flowing text around shapes
+-->
+
+<link rel="stylesheet" href="css/qualifications_1.css">
+
+
+<script> // 
+    function toggleTheme() {
+        // Obtains an array of all <link>
+        // elements.
+        // Select your element using indexing.
+        var theme = document.getElementsByTagName('link')[0];
+
+        // Change the value of href attribute 
+        // to change the css sheet.
+        var file_name = 'css/qualifications_1.css'
+        if (theme.getAttribute('href') == 'css/qualifications_1.css') {
+            theme.setAttribute('href', 'css/qualifications_2.css');
+            file_name = 'css/qualifications_2.css';
+        } else {
+            theme.setAttribute('href', 'css/qualifications_1.css');
+            file_name = 'css/qualifications_1.css';
+        }
+
+        localStorage.setItem('fileName', file_name);
+
+    }
+
+    window.onload = function(){
+    // TASK 2
+    // TODO: Make the last div color persist even when someone refreshes the page.
+
+    // Steps
+    // 2 (a) get stylesheet name from local storage hint: localStorage.getItem(name)
+ 
+    var styleSheetValue = localStorage.getItem('fileName') || 'css/qualifications_2.css';
+
+    // 2 (b) get html style element by ID
+    var styleElement = document.getElementsByTagName('link')[0];
+    styleElement.setAttribute('href', styleSheetValue);
+    // 2 (c) replace href attribute of html element.
+    
+    }
+</script>
+</script>
+
+<header> 
+    <nav>
+        <ul>
+            <li><a href = "index.html">Home</a></li>
+            <li><a href = "portfolio.html">Portfolio</a></li>
+            <li><a href = "qualifications.html">Qualifications</a></li>
+            <li><a href = "service.html">Service</a></li>
+            <li><a href = "chat_gpt.html">AI-Generated Webpage</a></li>
+            <li><button1 onclick="toggleTheme()" class = "style_change">Switch It Up</button></li>
+
+        </ul>
+    </nav>
+</header>
+
+</div>
+
+<div class = "container">
+
+
+    <div class = "rectangle">
+        <!-- <img src = "images/signature_dog.png" width = "350px" height = "267px" class = "dog"> -->
+        <p>Qualifications</p>
+    </div>
+
+    <img src = "svg/beam.svg" class = "beam">
+
+    <div class = "name">
+        <!-- <img src = "images/signature_dog.png" width = "350px" height = "267px" class = "dog"> -->
+        <p4>'fications</p4>
+    </div>
+
+    <img src = "images/Asset 5qualifications_icon.png" alt = "" class = "portfolio_img" width = 400px height = 400px>
+
+
+    <div class = "qualifications_body">
+        <ul1>
+            <li1>
+                <h3>Technical Skills</h3>
+                <ul2>
+                    <li2> <p3>C++ - proficient in data structures, memory allocation/deallocation, efficient code structure, syntax, etc.</p3></li2>
+                    <li2> <p3>Statistics - Linear and nonlinear models, using R to consolidate and present data</p3></li2>
+                    <li2> <p3>Java - Javafx, Abstraction, inheritence, etc.</p3></li2>
+                    <li2> <p3>Python </p3></li2>
+                </ul2>
+            </li1>
+            <li1>
+                <h3>Areas of interest</h3>
+                <ul2>
+                    <li2> <p3>Artificial Intelligence - AI is taking over the computer science field, and I want to jump on the bandwagon! 
+                        Since it is heavily based on data analysis, I chose my emphasis area outside of my major to be statistics. I believe
+                        this will equip me for a future in AI development and research. </p3></li2>
+                </ul2>   
+            </li1>   
+        </ul1>
+
+        <!-- <a href = "https://github.com/garrettguerrero/Resume"><button>Download My Resume Here!</button></a> -->
+        <a href = "files/resume_garrett_guerrero.pdf"><button>Download My Resume Here!</button></a>
+
+
+
+
+        
+    </div>
+
+    <footer>
+        <p1>Copyright © 2023 Garrett Guerrero</p1>
+    </footer>
+</div>
+
+
+
+
+<!-- <html>
+    <body>
+
+        <h1>Howdy!</h1>
+        <p1>Thanks and gig 'em!</p>
+    </body>
+</html>  -->

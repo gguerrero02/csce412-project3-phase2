@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<!-- 
+    Resources used:
+    https://blog.logrocket.com/creative-text-flows-using-css-shapes/  - flowing text around shapes
+-->
+
+<link rel="stylesheet" href="css/service_1.css">
+
+
+<script> // 
+    function toggleTheme() {
+        // Obtains an array of all <link>
+        // elements.
+        // Select your element using indexing.
+        var theme = document.getElementsByTagName('link')[0];
+
+        // Change the value of href attribute 
+        // to change the css sheet.
+        var file_name = 'css/service_1.css'
+        if (theme.getAttribute('href') == 'css/service_1.css') {
+            theme.setAttribute('href', 'css/service_2.css');
+            file_name = 'css/service_2.css';
+        } else {
+            theme.setAttribute('href', 'css/service_1.css');
+            file_name = 'css/service_1.css';
+        }
+
+        localStorage.setItem('fileName', file_name);
+
+    }
+
+    window.onload = function(){
+    // TASK 2
+    // TODO: Make the last div color persist even when someone refreshes the page.
+
+    // Steps
+    // 2 (a) get stylesheet name from local storage hint: localStorage.getItem(name)
+ 
+    var styleSheetValue = localStorage.getItem('fileName') || 'css/service_2.css';
+
+    // 2 (b) get html style element by ID
+    var styleElement = document.getElementsByTagName('link')[0];
+    styleElement.setAttribute('href', styleSheetValue);
+    // 2 (c) replace href attribute of html element.
+    
+    }
+</script>
+
+<header> 
+    <nav>
+        <ul>
+            <li><a href = "index.html">Home</a></li>
+            <li><a href = "portfolio.html">Portfolio</a></li>
+            <li><a href = "qualifications.html">Qualifications</a></li>
+            <li><a href = "service.html">Service</a></li>
+            <li><a href = "chat_gpt.html">AI-Generated Webpage</a></li>
+            <li><button1 onclick="toggleTheme()" class = "style_change">Switch It Up</button></li>
+
+        </ul>
+    </nav>
+</header>
+
+</div>
+
+<div class = "container">
+
+    <img src = "svg/beam.svg" class = "beam">
+
+    <div class = "name">
+        <!-- <img src = "images/signature_dog.png" width = "350px" height = "267px" class = "dog"> -->
+        <p4>How I <br/>Give Back</p4>
+    </div>
+
+    <img src = "images/Asset 6service_icon.png" alt = "" class = "portfolio_img" width = 400px height = 400px>
+
+
+
+    <div class = "rectangle">
+        <!-- <img src = "images/signature_dog.png" width = "350px" height = "267px" class = "dog"> -->
+        <p>How I Give Back</p>
+    </div>
+
+    <div class = "service_body">
+        <ul1>
+            <li1>
+                <h3>SPIES</h3>
+                <ul2>
+                    <li2> <p3>The primary way in which I currently get to give back to the Bryan/College Station community is through SPIES
+                        (Sophomores Progressing in Excellence and Sustainability). In this organization I act as an assistant director of 
+                        the public relations committe. As a whole, the organization strives to give sophomores a sense of community and a
+                        chance to learn and promote sustainable practices in their everyday lives. Through park clean-ups, fundraisers,
+                        and service events, SPIES provides plenty of opporunities to give back!
+                    </p3></li2>
+                </ul2>
+            </li1>
+        </ul1>
+
+      
+
+
+
+        
+    </div>
+
+    <footer>
+        <p1>Copyright © 2023 Garrett Guerrero</p1>
+    </footer>
+</div>
+
+
+
+
+<!-- <html>
+    <body>
+
+        <h1>Howdy!</h1>
+        <p1>Thanks and gig 'em!</p>
+    </body>
+</html>  -->

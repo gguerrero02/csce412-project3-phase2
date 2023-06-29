@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<!-- 
+    Resources used:
+    https://blog.logrocket.com/creative-text-flows-using-css-shapes/  - flowing text around shapes
+    https://www.geeksforgeeks.org/how-to-switch-between-multiple-css-stylesheets-using-javascript/ - switching between css styles
+-->
+
+<link rel="stylesheet" href="css/index_1.css">
+
+<script> // 
+    function toggleTheme() {
+        // Obtains an array of all <link>
+        // elements.
+        // Select your element using indexing.
+        var theme = document.getElementsByTagName('link')[0];
+
+        // Change the value of href attribute 
+        // to change the css sheet.
+        var file_name = 'css/index_1.css'
+        if (theme.getAttribute('href') == 'css/index_1.css') {
+            theme.setAttribute('href', 'css/index_2.css');
+            file_name = 'css/index_2.css';
+        } else {
+            theme.setAttribute('href', 'css/index_1.css');
+            file_name = 'css/index_1.css';
+        }
+
+        localStorage.setItem('fileName', file_name);
+
+    }
+
+    window.onload = function(){
+    // TASK 2
+    // TODO: Make the last div color persist even when someone refreshes the page.
+
+    // Steps
+    // 2 (a) get stylesheet name from local storage hint: localStorage.getItem(name)
+ 
+    var styleSheetValue = localStorage.getItem('fileName') || 'css/index_2.css';
+
+    // 2 (b) get html style element by ID
+    var styleElement = document.getElementsByTagName('link')[0];
+    styleElement.setAttribute('href', styleSheetValue);
+    // 2 (c) replace href attribute of html element.
+    
+    }
+</script>
+
+
+<header> 
+    <nav>
+        <ul>
+            <li><a href = "index.html">Home</a></li>
+            <li><a href = "portfolio.html">Portfolio</a></li>
+            <li><a href = "qualifications.html">Qualifications</a></li>
+            <li><a href = "service.html">Service</a></li>
+            <li><a href = "chat_gpt.html">AI-Generated Webpage</a></li>
+            <li><button1 onclick="toggleTheme()" class = "style_change">Switch It Up</button></li>
+
+        </ul>
+    </nav>
+</header>
+
+</div>
+
+
+
+<div class = "container">
+    <img src = "svg/beam.svg" class = "beam">
+    <img src = "images/profile_pic_2.jpg" alt = "" class = "profile_pic_2" width = 400px height = 400px>
+
+    <div class = "name">
+        Garrett <br /> Guerrero
+    </div>
+
+    <div class = "rectangle">
+        <img src = "images/signature_dog.png" width = "350px" height = "267px" class = "dog">
+        <h1>Howdy!</h1>
+    </div>
+    <div class = "wrapper">
+
+        <section class = "about_me">
+            <img src = "images/profile_pic_2.jpg" alt = "" class = "profile_pic" width = 400px height = 400px>
+            <div class = "text_circ">
+                <i></i>
+                My name is Garrett Guerrero. I am a computer science major at Texas A&M University.
+                I consider myself a very well-rounded individual, so I bring a wide range of skills
+                to the table and am always open to mastering new ones. First and foremost, I have a 
+                deep love and appreciation for the STEM field - I find the endless stream of problems
+                being solved every day with new ideas and technological advances absolutely inspiring. 
+                However, STEM isn’t my only passion. The arts play a huge role in my daily life. Music, 
+                art, and design act as a driving force for me to not only deliver functional solutions to 
+                problems, but beautiful and expressive solutions as well. Expression is such an important 
+                part of who we are as humans, so why should we limit ourselves to bare-bones solutions? 
+                As I have made my way through college and participated in group labs, projects, and 
+                presentations, I have fostered my love of people. I believe in the power of building 
+                up those around you, that making strong interpersonal connections can lead to more 
+                innovation, creativity, and expression. I have also had the opportunity to act as an 
+                assistant director for a sustainability-based social organization on campus called 
+                SPIES (Sophomores Progressing in Excellence and Sustainability). I am currently helping 
+                lead the public relations committee, so not only do I get to nurture my creative side 
+                by designing merchandise and infographics, but I get to witness those that I lead grow 
+                closer together as friends. I hope whatever teams I lead in the future will grow 
+                together in the same way. Through my fascination with STEM, love of art, and desire 
+                to become the best leader and team-member that I can be. I believe my wide skill set 
+                also allows me to approach ideas with unique perspectives, so I think I make a great 
+                candidate for any team-based work environment! 
+            </div>
+            <div class = "circle" ></div>   
+            <p>
+               My name is Garrett Guerrero. I am a computer science major at Texas A&M University.
+               I consider myself a very well-rounded individual, so I bring a wide range of skills
+               to the table and am always open to mastering new ones. First and foremost, I have a 
+               deep love and appreciation for the STEM field - I find the endless stream of problems
+               being solved every day with new ideas and technological advances absolutely inspiring. 
+               However, STEM isn’t my only passion. The arts play a huge role in my daily life. Music, 
+               art, and design act as a driving force for me to not only deliver functional solutions to 
+               problems, but beautiful and expressive solutions as well. Expression is such an important 
+               part of who we are as humans, so why should we limit ourselves to bare-bones solutions? 
+               As I have made my way through college and participated in group labs, projects, and 
+               presentations, I have fostered my love of people. I believe in the power of building 
+               up those around you, that making strong interpersonal connections can lead to more 
+               innovation, creativity, and expression. I have also had the opportunity to act as an 
+               assistant director for a sustainability-based social organization on campus called 
+               SPIES (Sophomores Progressing in Excellence and Sustainability). I am currently helping 
+               lead the public relations committee, so not only do I get to nurture my creative side 
+               by designing merchandise and infographics, but I get to witness those that I lead grow 
+               closer together as friends. I hope whatever teams I lead in the future will grow 
+               together in the same way. Through my fascination with STEM, love of art, and desire 
+               to become the best leader and team-member that I can be. I believe my wide skill set 
+               also allows me to approach ideas with unique perspectives, so I think I make a great 
+               candidate for any team-based work environment! 
+            </p>
+
+        </section>
+    </div>
+    <footer>
+        <p 1>Copyright © 2023 Garrett Guerrero</p 1>
+    </footer>
+</div>
+
+
+
+
+<!-- <html>
+    <body>
+
+        <h1>Howdy!</h1>
+        <p1>Thanks and gig 'em!</p>
+    </body>
+</html>  -->
