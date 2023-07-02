@@ -11,7 +11,8 @@ jobs:
     name: Deploy to S3 Production
     runs-on: ubuntu-latest
     steps:
-        - name: Cloudfront Invalidation
+      # Steps for deploying to S3 and invalidating CloudFront
+      - name: Cloudfront Invalidation
         uses: chetan/invalidate-cloudfront-action@master
         env:
           DISTRIBUTION: ${{ secrets.AWS_DISTRIBUTION_PRODUCTION }}
