@@ -12,12 +12,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # Steps for deploying to S3 and invalidating CloudFront
-      - name: Download landing page artifact
-        uses: actions/download-artifact@v2
-        with:
-          name: web-app-dist
-          path: dist
-
       - name: Display structure of downloaded files
         run: ls -R
         working-directory: dist
