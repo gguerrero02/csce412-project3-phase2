@@ -7,36 +7,36 @@ on:
       - 'main'
 
 jobs:
-  build:
-    name: Build
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-node@v2.5.1
-      with:
-        node-version: '15'
+  # build:
+  #   name: Build
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #   - uses: actions/checkout@v2
+  #   - uses: actions/setup-node@v2.5.1
+  #     with:
+  #       node-version: '15'
 
-    - name: Configure AWS Credentials
-      uses: aws-actions/configure-aws-credentials@v1
-      with:
-        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-region: us-east-1
+  #   - name: Configure AWS Credentials
+  #     uses: aws-actions/configure-aws-credentials@v1
+  #     with:
+  #       aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+  #       aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+  #       aws-region: us-east-1
 
-    - name: Install packages
-      run: npm install
+  #   - name: Install packages
+  #     run: npm install
 
-    - name: Run build
-      run: npm run build
+  #   - name: Run build
+  #     run: npm run build
 
-    - name: Generate
-      run: npm run generate
+  #   - name: Generate
+  #     run: npm run generate
 
-    - name: Upload artifact
-      uses: actions/upload-artifact@master
-      with:
-        name: web-app-dist
-        path: './dist'
+  #   - name: Upload artifact
+  #     uses: actions/upload-artifact@master
+  #     with:
+  #       name: web-app-dist
+  #       path: './dist'
 
   deploy_to_production:
     name: Deploy to S3 Production
