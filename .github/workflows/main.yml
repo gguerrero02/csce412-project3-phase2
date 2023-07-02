@@ -11,22 +11,7 @@ jobs:
     name: Deploy to S3 Production
     runs-on: ubuntu-latest
     steps:
-      # Steps for deploying to S3 and invalidating CloudFront
-      - name: Display structure of downloaded files
-        run: ls -R
-        working-directory: dist
-
-      - name: S3 Sync
-        uses: jakejarvis/s3-sync-action@v0.5.1
-        with:
-          args: --acl public-read --follow-symlinks --delete
-        env:
-          AWS_S3_BUCKET: 'csce412gguerrero.xyz'
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_REGION: 'us-east-1'   # optional: defaults to us-east-1
-
-      - name: Cloudfront Invalidation
+        - name: Cloudfront Invalidation
         uses: chetan/invalidate-cloudfront-action@master
         env:
           DISTRIBUTION: ${{ secrets.AWS_DISTRIBUTION_PRODUCTION }}
